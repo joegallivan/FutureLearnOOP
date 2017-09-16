@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/Joe2/Documents/FutureLearn_Courses/Python__RPi_OOP/packaged_code/main.py">/Users/Joe2/Documents/FutureLearn_Courses/Python__RPi_OOP/packaged_code/main.py</a></font></td></tr></table>
+    <p><tt>Main&nbsp;file&nbsp;set&nbsp;up&nbsp;to&nbsp;run&nbsp;the&nbsp;game.<br>
+This&nbsp;file&nbsp;creates&nbsp;4&nbsp;rooms,&nbsp;8&nbsp;links,&nbsp;3&nbsp;enemies,&nbsp;1&nbsp;friend&nbsp;and&nbsp;3&nbsp;items.<br>
+It&nbsp;then&nbsp;runs&nbsp;the&nbsp;game&nbsp;until&nbsp;either&nbsp;the&nbsp;player&nbsp;wins&nbsp;or&nbsp;loses&nbsp;all&nbsp;their&nbsp;lives</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="rpg.html">rpg</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-enemy_choices"><strong>enemy_choices</strong></a>(enemies)</dt><dd><tt>Sets&nbsp;up&nbsp;a&nbsp;string&nbsp;to&nbsp;display&nbsp;the&nbsp;available&nbsp;enemy&nbsp;names&nbsp;for&nbsp;use&nbsp;in&nbsp;advice&nbsp;processing<br>
+Input:&nbsp;&nbsp;enemies,&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;enemy&nbsp;names&nbsp;to&nbsp;enemy&nbsp;objects.<br>
+Returns:&nbsp;a&nbsp;string&nbsp;suitable&nbsp;for&nbsp;displaying&nbsp;the&nbsp;available&nbsp;enemy&nbsp;names</tt></dd></dl>
+ <dl><dt><a name="-process_fight"><strong>process_fight</strong></a>(inhabitant, room, backpack, Enemy)</dt><dd><tt>Helper&nbsp;function&nbsp;which&nbsp;determines&nbsp;the&nbsp;outcome&nbsp;of&nbsp;a&nbsp;fight&nbsp;with&nbsp;an&nbsp;enemy.<br>
+Inputs:&nbsp;&nbsp;inhabitant,&nbsp;an&nbsp;enemy&nbsp;character<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;room,&nbsp;the&nbsp;room&nbsp;inhabitant&nbsp;is&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;backpack,&nbsp;the&nbsp;weapons&nbsp;holder<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enemy,&nbsp;a&nbsp;pointer&nbsp;to&nbsp;the&nbsp;Enemy&nbsp;class<br>
+Returns:&nbsp;True&nbsp;if&nbsp;the&nbsp;game&nbsp;is&nbsp;over,&nbsp;otherwise&nbsp;False</tt></dd></dl>
+ <dl><dt><a name="-start_displays"><strong>start_displays</strong></a>()</dt><dd><tt>Helper&nbsp;function:&nbsp;prints&nbsp;out&nbsp;information&nbsp;to&nbsp;the&nbsp;player&nbsp;at&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;game.<br>
+Called&nbsp;after&nbsp;rooms,&nbsp;items,&nbsp;enemies&nbsp;and&nbsp;friend&nbsp;have&nbsp;been&nbsp;set&nbsp;up</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>backpack</strong> = ['banana', 'sword', 'pineapple']<br>
+<strong>ballroom</strong> = &lt;rpg.room.Room object&gt;<br>
+<strong>bedroom</strong> = &lt;rpg.room.Room object&gt;<br>
+<strong>casper</strong> = &lt;rpg.character.Friend object&gt;<br>
+<strong>command</strong> = 'fight'<br>
+<strong>current_room</strong> = &lt;rpg.room.Room object&gt;<br>
+<strong>dave</strong> = &lt;rpg.character.Enemy object&gt;<br>
+<strong>dining_hall</strong> = &lt;rpg.room.Room object&gt;<br>
+<strong>enemies</strong> = {}<br>
+<strong>enemy</strong> = 'Lucretia'<br>
+<strong>game_over</strong> = True<br>
+<strong>inhabitant</strong> = &lt;rpg.character.Enemy object&gt;<br>
+<strong>item</strong> = &lt;rpg.item.Item object&gt;<br>
+<strong>item1</strong> = &lt;rpg.item.Item object&gt;<br>
+<strong>item2</strong> = &lt;rpg.item.Item object&gt;<br>
+<strong>item3</strong> = &lt;rpg.item.Item object&gt;<br>
+<strong>jamie</strong> = &lt;rpg.character.Enemy object&gt;<br>
+<strong>kitchen</strong> = &lt;rpg.room.Room object&gt;<br>
+<strong>lucretia</strong> = &lt;rpg.character.Enemy object&gt;<br>
+<strong>weakness</strong> = 'sword'</td></tr></table>
+</body></html>

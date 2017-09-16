@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module rpg.character</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="rpg.html"><font color="#ffffff">rpg</font></a>.character</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/Joe2/Documents/FutureLearn_Courses/Python__RPi_OOP/packaged_code/rpg/character.py">/Users/Joe2/Documents/FutureLearn_Courses/Python__RPi_OOP/packaged_code/rpg/character.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rpg.character.html#Character">Character</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rpg.character.html#Enemy">Enemy</a>
+</font></dt><dt><font face="helvetica, arial"><a href="rpg.character.html#Friend">Friend</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Character">class <strong>Character</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Character">Character</a>&nbsp;class&nbsp;-&nbsp;a&nbsp;character&nbsp;in&nbsp;the&nbsp;game<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Character-__init__"><strong>__init__</strong></a>(self, char_name, char_description)</dt><dd><tt>Initialises&nbsp;variables.<br>
+Inputs:&nbsp;char_name,&nbsp;the&nbsp;character's&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char_description,&nbsp;a&nbsp;description&nbsp;of&nbsp;the&nbsp;character</tt></dd></dl>
+
+<dl><dt><a name="Character-describe"><strong>describe</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;the&nbsp;character's&nbsp;name&nbsp;and&nbsp;description</tt></dd></dl>
+
+<dl><dt><a name="Character-fight"><strong>fight</strong></a>(self, combat_item)</dt><dd><tt>prints&nbsp;out&nbsp;message&nbsp;saying&nbsp;character&nbsp;doesn't&nbsp;want&nbsp;fight</tt></dd></dl>
+
+<dl><dt><a name="Character-get_name"><strong>get_name</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;character's&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="Character-set_conversation"><strong>set_conversation</strong></a>(self, conversation)</dt><dd><tt>Set&nbsp;what&nbsp;this&nbsp;character&nbsp;will&nbsp;say&nbsp;when&nbsp;talked&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="Character-talk"><strong>talk</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;character's&nbsp;conversation</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Enemy">class <strong>Enemy</strong></a>(<a href="rpg.character.html#Character">Character</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Enemy">Enemy</a>&nbsp;class&nbsp;-&nbsp;you&nbsp;fight&nbsp;against&nbsp;these!<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rpg.character.html#Enemy">Enemy</a></dd>
+<dd><a href="rpg.character.html#Character">Character</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Enemy-__init__"><strong>__init__</strong></a>(self, char_name, char_description)</dt><dd><tt>Constructor&nbsp;-calls&nbsp;super&nbsp;class's&nbsp;and&nbsp;creates&nbsp;a&nbsp;weakness&nbsp;attribute.</tt></dd></dl>
+
+<dl><dt><a name="Enemy-fight"><strong>fight</strong></a>(self, combat_item)</dt><dd><tt>Simulates&nbsp;a&nbsp;fight&nbsp;with&nbsp;this&nbsp;enemy&nbsp;character.<br>
+If&nbsp;this&nbsp;enemy&nbsp;is&nbsp;asleep,&nbsp;player&nbsp;wins&nbsp;and&nbsp;enemy&nbsp;killed&nbsp;without&nbsp;a&nbsp;fight.<br>
+If&nbsp;the&nbsp;combat&nbsp;item&nbsp;matches&nbsp;this&nbsp;enemy's&nbsp;weakness,&nbsp;caller&nbsp;wins.<br>
+Otherwise,&nbsp;this&nbsp;enemy&nbsp;wins.&nbsp;In&nbsp;each&nbsp;case,&nbsp;a&nbsp;suitable&nbsp;message&nbsp;is&nbsp;printed.<br>
+Updates&nbsp;number&nbsp;of&nbsp;lives,&nbsp;dictionary&nbsp;and&nbsp;number&nbsp;of&nbsp;enemies&nbsp;appropriately.<br>
+Inputs:&nbsp;&nbsp;combat_item,&nbsp;the&nbsp;weapon&nbsp;caller&nbsp;is&nbsp;using.<br>
+Returns:&nbsp;True&nbsp;if&nbsp;caller&nbsp;wins,&nbsp;False&nbsp;if&nbsp;this&nbsp;enemy&nbsp;wins</tt></dd></dl>
+
+<dl><dt><a name="Enemy-get_weakness"><strong>get_weakness</strong></a>(self)</dt><dd><tt>Returns&nbsp;weakness</tt></dd></dl>
+
+<dl><dt><a name="Enemy-remove_enemy"><strong>remove_enemy</strong></a>(self, enemy)</dt><dd><tt>Removes&nbsp;the&nbsp;enemy&nbsp;with&nbsp;this&nbsp;name&nbsp;from&nbsp;the&nbsp;enemies&nbsp;dictionary.<br>
+No&nbsp;effect&nbsp;if&nbsp;it&nbsp;is&nbsp;not&nbsp;in&nbsp;the&nbsp;dictionary<br>
+Input:&nbsp;&nbsp;enemy,&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;enemy&nbsp;to&nbsp;be&nbsp;removed</tt></dd></dl>
+
+<dl><dt><a name="Enemy-set_weakness"><strong>set_weakness</strong></a>(self, weakness)</dt><dd><tt>Puts&nbsp;a&nbsp;value&nbsp;in&nbsp;weakness</tt></dd></dl>
+
+<dl><dt><a name="Enemy-sleep"><strong>sleep</strong></a>(self)</dt><dd><tt>Allows&nbsp;a&nbsp;player&nbsp;to&nbsp;attempt&nbsp;to&nbsp;put&nbsp;this&nbsp;enemy&nbsp;character&nbsp;to&nbsp;sleep.<br>
+If&nbsp;it&nbsp;succeeds,&nbsp;the&nbsp;player&nbsp;can&nbsp;fight&nbsp;it&nbsp;and&nbsp;will&nbsp;win&nbsp;the&nbsp;next&nbsp;bout.<br>
+The&nbsp;player&nbsp;is&nbsp;unaware&nbsp;of&nbsp;the&nbsp;outcome.<br>
+Returns:&nbsp;True&nbsp;if&nbsp;the&nbsp;attempt&nbsp;succeeds,&nbsp;otherwise&nbsp;False</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Enemy-get_enemies"><strong>get_enemies</strong></a>()</dt><dd><tt>Returns&nbsp;the&nbsp;enemies&nbsp;dictionary&nbsp;mapping&nbsp;names&nbsp;to&nbsp;enemies</tt></dd></dl>
+
+<dl><dt><a name="Enemy-get_num_enemies"><strong>get_num_enemies</strong></a>()</dt><dd><tt>Returns&nbsp;current&nbsp;number&nbsp;of&nbsp;enemies&nbsp;in&nbsp;the&nbsp;game</tt></dd></dl>
+
+<dl><dt><a name="Enemy-get_num_lives"><strong>get_num_lives</strong></a>()</dt><dd><tt>Returns&nbsp;current&nbsp;number&nbsp;of&nbsp;player's&nbsp;lives&nbsp;left</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>enemies</strong> = {}</dl>
+
+<dl><dt><strong>num_enemies</strong> = 0</dl>
+
+<dl><dt><strong>num_lives</strong> = 2</dl>
+
+<hr>
+Methods inherited from <a href="rpg.character.html#Character">Character</a>:<br>
+<dl><dt><a name="Enemy-describe"><strong>describe</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;the&nbsp;character's&nbsp;name&nbsp;and&nbsp;description</tt></dd></dl>
+
+<dl><dt><a name="Enemy-get_name"><strong>get_name</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;character's&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="Enemy-set_conversation"><strong>set_conversation</strong></a>(self, conversation)</dt><dd><tt>Set&nbsp;what&nbsp;this&nbsp;character&nbsp;will&nbsp;say&nbsp;when&nbsp;talked&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="Enemy-talk"><strong>talk</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;character's&nbsp;conversation</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="rpg.character.html#Character">Character</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Friend">class <strong>Friend</strong></a>(<a href="rpg.character.html#Character">Character</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Advises&nbsp;player&nbsp;about&nbsp;enemy's&nbsp;weapons.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rpg.character.html#Friend">Friend</a></dd>
+<dd><a href="rpg.character.html#Character">Character</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Friend-__init__"><strong>__init__</strong></a>(self, char_name, char_description)</dt><dd><tt>Initialises&nbsp;variables.<br>
+Inputs:&nbsp;char_name,&nbsp;the&nbsp;character's&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char_description,&nbsp;a&nbsp;description&nbsp;of&nbsp;the&nbsp;character</tt></dd></dl>
+
+<dl><dt><a name="Friend-advice"><strong>advice</strong></a>(self, enemy, enemies)</dt><dd><tt>Advises&nbsp;player&nbsp;about&nbsp;the&nbsp;weakness&nbsp;of&nbsp;an&nbsp;enemy.<br>
+Inputs:&nbsp;&nbsp;enemy,&nbsp;the&nbsp;name&nbsp;of&nbsp;an&nbsp;enemy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemies,&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;enemy&nbsp;name&nbsp;to&nbsp;its&nbsp;<a href="builtins.html#object">object</a><br>
+Returns:&nbsp;&nbsp;the&nbsp;weakness&nbsp;of&nbsp;this&nbsp;enemy</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="rpg.character.html#Character">Character</a>:<br>
+<dl><dt><a name="Friend-describe"><strong>describe</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;the&nbsp;character's&nbsp;name&nbsp;and&nbsp;description</tt></dd></dl>
+
+<dl><dt><a name="Friend-fight"><strong>fight</strong></a>(self, combat_item)</dt><dd><tt>prints&nbsp;out&nbsp;message&nbsp;saying&nbsp;character&nbsp;doesn't&nbsp;want&nbsp;fight</tt></dd></dl>
+
+<dl><dt><a name="Friend-get_name"><strong>get_name</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;character's&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="Friend-set_conversation"><strong>set_conversation</strong></a>(self, conversation)</dt><dd><tt>Set&nbsp;what&nbsp;this&nbsp;character&nbsp;will&nbsp;say&nbsp;when&nbsp;talked&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="Friend-talk"><strong>talk</strong></a>(self)</dt><dd><tt>Prints&nbsp;out&nbsp;character's&nbsp;conversation</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="rpg.character.html#Character">Character</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
